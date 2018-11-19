@@ -1,0 +1,23 @@
+.example-full-width {
+    width: 35%;
+    height: 5%;
+    padding: 15px;
+  }
+.form-group{
+    width: 25%;
+    height: 5%;
+    padding: 15px; 
+}
+table {
+    width: 100%;
+  }
+.mat-card{
+    margin-top: 3%;
+}
+h3{
+    color:#1360DD;
+}
+.mat-header-cell {
+    color: rgb(255, 255, 255);
+    background-color: #3ba7bf;
+}

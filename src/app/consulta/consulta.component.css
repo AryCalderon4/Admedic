@@ -1,0 +1,44 @@
+/*.example-full-width {
+    width: 25%;
+    height: 5%;
+    padding: 15px;
+    
+  }
+
+.textarea{
+    width: 25%;
+    height: 5%;
+    padding-left: 15px;
+}*/
+.form-group{
+    
+      width: 15%;
+      height: 5%;
+      padding: 15px;
+   }  
+.example-full-width {
+    width: 50%;
+    height: 5%;
+    padding: 15px;
+  }
+#select{
+    width: 50%;
+    height: 5%;
+    padding: 15px;
+}
+.cardM{
+    margin-top:3%;
+}
+h3{
+    color:#1360DD;
+}
+button{
+    background-color: #2777edb0;
+    color: white;
+}
+textarea{
+    display: inline-block;
+}
+.mat-card{
+    margin-top: 3%;
+}

@@ -1,0 +1,72 @@
+<form (submit)="onRegistro(registerForm)" #registerForm="ngForm" class="body">
+    <mat-card>
+        <div class="row">
+            <div action="">
+                <h3><i class="far fa-address-card"></i> Registro de Doctor</h3>
+                <mat-form-field class="example-full-width">
+                    <input  matInput name="nombre" ngModel placeholder="Nombre(s)" #nombreInput="ngModel">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput name="paterno" ngModel placeholder="Apellidos Paterno" #aPaternoInput="ngModel">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput name="materno" ngModel placeholder="Apellidos Materno" #aMaternoInput="ngModel">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput type="email" name="correo" ngModel placeholder="Correo" #correoInput="ngModel">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput type="password" name="contraseña" ngModel placeholder="Contraseña" #contraInput="ngModel">
+                </mat-form-field>
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <!-- Bootstrap-->
+
+                <h3><i class="fas fa-user-md"></i> Información personal</h3>
+                <mat-form-field class="example-full-width">
+                    <input   matInput name="cedula" ngModel placeholder="Cedula Profesional" #cedulaInput="ngModel">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input  matInput name="eProcedencia" ngModel placeholder="Escuela de procedencia" #escuelaInput="ngModel">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                    <input matInput name="generacion" ngModel placeholder="Generacion" #generacionInput="ngModel">
+                </mat-form-field>
+
+
+            </div>
+            <div class="col-lg-6 col-md-6">
+                <h3><i class="fas fa-stethoscope"></i> Especilidad</h3>
+                <mat-select name="especialidad" ngModel placeholder="Especialidad" id="select" #especialInput="ngModel">
+                    <mat-option *ngFor="let Especialidad of Especialidades" [value]="Especialidad.value">
+                        {{Especialidad.viewValue}}
+                    </mat-option>
+                </mat-select>
+
+
+            </div>
+
+        </div>
+        <button mat-raised-button type="submit"> Guardar</button>
+    </mat-card>
+
+    <mat-card>
+        <h3><i class="far fa-hospital"></i> Información de Consultorio</h3>
+        <mat-form-field class="example-full-width">
+            <input matInput  name="consultorio" ngModel placeholder="Nombre del consultorio" #consultorioInput="ngModel">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput name="domicilio" ngModel placeholder="Domicilio" #domicilioInput="ngModel">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput name="cp" ngModel placeholder="C.P" #cpInput="ngModel">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput name="pais" ngModel placeholder="Pais" #paisInput="ngModel">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+            <input matInput name="telefono" ngModel placeholder="Telefono" #telefonoInput="ngModel">
+        </mat-form-field>
+        <button mat-raised-button type="submit"> Guardar</button>
+    </mat-card>
+</form>

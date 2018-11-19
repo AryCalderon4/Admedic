@@ -1,0 +1,71 @@
+<mat-card class="cardM">
+    <div class="row">
+        <div action="">
+            <h3><i class="far fa-address-card"></i> Registro de Doctor</h3>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Nombre(s)">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Apellidos Paterno">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Apellidos Materno">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Correo">
+            </mat-form-field>
+
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <!-- Bootstrap-->
+
+            <h3><i class="fas fa-user-md"></i> Información personal</h3>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Cedula Profesional">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Escuela de procedencia">
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput placeholder="Generacion">
+            </mat-form-field>
+
+
+        </div>
+        <div class="col-lg-6 col-md-6">
+            <h3><i class="fas fa-stethoscope"></i> Especilidad</h3>
+            <mat-select placeholder="Especialidad" id="select">
+                <mat-option *ngFor="let Especialidad of Especialidades" [value]="Especialidad.value">
+                    {{Especialidad.viewValue}}
+                </mat-option>
+            </mat-select>
+
+
+        </div>
+
+    </div>
+
+</mat-card>
+
+<mat-card>
+    <h3><i class="far fa-hospital"></i> Información de Consultorio</h3>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nombre del consultorio">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Domicilio">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="C.P">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Pais">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput placeholder="Telefono">
+    </mat-form-field>
+    <button mat-raised-button>Guardar</button>
+
+
+
+</mat-card>

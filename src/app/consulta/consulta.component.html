@@ -1,0 +1,86 @@
+<form (submit)="onRconsulta(registerCForm)" #registerCForm="ngForm">
+  
+<mat-card>
+<Section class="header">
+  <h3><i class="fas fa-user"></i>Nombre del Paciente</h3>
+  <mat-form-field class="example-full-width">
+  <input matInput name="edad" ngModel placeholder="Edad:"  #edadInput="ngModel">
+  </mat-form-field>
+  <form>
+      <div class="form-group col-lg-6 col-md-6">
+        <label for="dateOfBirth">Fecha de nacimiento</label>
+        <div class="input-group">
+          <input name ="fNacimiento" ngModel id="dateOfBirth" class="form-control" placeholder="yyyy-mm-dd" #nacimientoInput="ngModel"> <!--name="dp" ngbDatepicker #dp="ngbDatepicker" --> 
+          <div class="input-group-append">
+            <button class="btn btn-outline-secondary calendar" (click)="dp.toggle()" type="button"></button>
+          </div>
+        </div>
+      </div>
+    </form>   
+</Section>
+<section class="body">
+    <mat-form-field class="example-full-width">
+       <input matInput name="altura" ngModel placeholder="Talla:"  #alturaInput="ngModel">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+       <input matInput name="peso" ngModel placeholder="Peso:"  #pesoInput="ngModel">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+       <input matInput name="temperatura" ngModel placeholder="Temperatura:"  #temperaturaInput="ngModel">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+        <input matInput name="fCardiaca" ngModel placeholder="Frecuencia Cardiaca:"  #fCardiacaInput="ngModel">
+     </mat-form-field>
+     <mat-form-field class="example-full-width">
+        <input matInput  name="fRespiratoria" ngModel placeholder="Frecuencia Respiratoria:"  #fRespiratoriaInput="ngModel">
+     </mat-form-field>
+     <h3><i class="fas fa-stethoscope"></i>Sintomas</h3>
+     <mat-form-field>
+        <textarea matInput name="Sintomas" ngModel class="textarea" cols="30" rows="10"   #sintomasInput="ngModel"></textarea>  <!-- [value]="newPost" #postInput -->
+      </mat-form-field>
+      <h3><i class="fas fa-diagnoses"></i>Diagnostico</h3>
+      <mat-form-field>
+          <textarea matInput name="Diagnostico" ngModel class="textarea" cols="30" rows="10"  [(ngModel)]="enteredPost"  #diagnosticoInput="ngModel"></textarea>  <!-- [value]="newPost" #postInput -->
+        </mat-form-field>
+</section>
+<section class ="footer">
+  <h3> <i class="fas fa-pills"></i>Medicinas</h3>
+ 
+  <!-- ng template esconde el modal --> 
+<ng-template #content let-modal>
+  <div class="modal-header">
+    <h3 class="modal-title" id="modal-basic-title"><i class="fas fa-prescription-bottle-alt"></i>Nuevo Medicamento</h3>
+    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+
+  <div class="modal-body">
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Nombre(s)">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Dosis">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Frecuencia">
+      </mat-form-field>
+      <mat-form-field class="example-full-width">
+        <input matInput placeholder="Duracion">
+      </mat-form-field>
+
+
+    
+    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Guardar</button>
+  </div>
+
+</ng-template>
+
+<button class="btn btn-lg btn-outline-primary" (click)="open(content)">Añadir</button>
+
+<button class="btn btn-lg btn-outline-primary"> Guardar consulta</button>
+</section>
+
+
+</mat-card>
+</form>

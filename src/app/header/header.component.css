@@ -1,0 +1,17 @@
+a{
+  color: white;
+  margin-left: 5%;
+  text-decoration: none;
+}
+img{
+  width: 12%;
+}
+.tRight{
+  flex:1 1 auto;
+  
+}
+
+.mat-toolbar {
+  background: #20a1b6c2;
+  font-family: unset;
+}

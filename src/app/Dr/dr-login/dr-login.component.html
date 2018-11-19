@@ -1,0 +1,15 @@
+<div class ="login">
+<mat-card class="cardM">
+  <form (submit)="onLogin(loginForm)" #loginForm="ngForm" class="body">
+    <img src="./assets/img/login.png">
+    <h3>Ingresar</h3>
+    <mat-form-field class="example-full-width">
+      <input type="email" matInput  name="correo" ngModel placeholder="Correo" #correoInput="ngModel">
+    </mat-form-field>
+    <mat-form-field class="example-full-width">
+      <input type="password" matInput name="contraseña" ngModel placeholder="Contraseña" #contraInput="ngModel">
+    </mat-form-field>
+    <button mat-raised-button type="submit"> Iniciar Sesión</button>
+  </form>
+</mat-card>
+</div>
